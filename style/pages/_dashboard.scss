@@ -1,0 +1,24 @@
+.dashboard-page {
+    background-color: #f7f7f7;
+    min-height: 100vh;
+
+    .amount-area {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .icon {
+            padding: 14px;
+            border-radius: 14px;
+            font-size: 24px;
+        }
+
+        h5,
+        p {
+            margin: 0;
+        }
+
+        h5 {
+            font-weight: 700;
+        }
+    }
+}

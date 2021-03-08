@@ -1,0 +1,43 @@
+.toggle {
+    border: none;
+    outline: none;
+    position: relative;
+    width: 36px;
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 2px;
+        background-color: #000;
+        transition: .3s;
+
+        &:first-child {
+            top: -7px;
+        }
+
+        &:last-child {
+            top: 7px;
+        }
+    }
+
+    &.menu-show {
+        span {
+            &:first-child {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                left: -50px;
+                opacity: 0;
+            }
+
+            &:last-child {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

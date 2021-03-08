@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Pengaduan Masyarakat</title>
+
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="vendor/boxicons/css/boxicons.min.css">
+</head>
+
+<body onload="startTime()">
+
+    <div class="dashboard-page">
+        <div class="container-fluid container-dashboard">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="sidebar">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="." class="sidebar-logo">
+                                <i class='bx bxs-category'></i> Appem
+                            </a>
+                            <div class="toggle d-block d-md-none" id="toggle" onclick="toggleMenu()">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-menu" id="sidebar">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a href="dashboard.html" class="sidebar-link active">
+                                        <i class='bx bxs-dashboard'></i> Dashboard
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="verifikasi-pengaduan.html" class="sidebar-link">
+                                        <i class='bx bxs-report'></i> Verifikasi Pengaduan
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="laporan.html" class="sidebar-link">
+                                        <i class='bx bx-envelope'></i> Laporan
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="masyarakat.html" class="sidebar-link">
+                                        <i class='bx bxs-user-account'></i> Data Masyarakat
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="petugas.html" class="sidebar-link">
+                                        <i class='bx bxs-user'></i> Petugas
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#" class="sidebar-link">
+                                        <i class='bx bx-log-out'></i> Keluar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="content">
+                        <h3 class="h3 m-0 mb-2 fw-bold">Dashboard</h3>
+                        <p class="text-secondary"><span id="clock"></span> &#8211; <span id="days"></span></p>
+
+                        <div class="card amount-data mt-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="amount-area">
+                                            <div class="row align-items-center">
+                                                <div class="col-3">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center icon bg-green-alt text-green">
+                                                        <i class='bx bxs-user'></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9">
+                                                    <h5>23 Orang</h5>
+                                                    <p>Petugas / Pengguna Aplikasi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="amount-area">
+                                            <div class="row align-items-center">
+                                                <div class="col-3">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center icon bg-red-alt text-red">
+                                                        <i class='bx bx-envelope'></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9">
+                                                    <h5>10</h5>
+                                                    <p>Pengaduan <span class="text-danger">Belum Dibaca</span> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="amount-area">
+                                            <div class="row align-items-center">
+                                                <div class="col-3">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center icon bg-green-alt text-green">
+                                                        <i class='bx bx-envelope-open'></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9">
+                                                    <h5>50</h5>
+                                                    <p>Total Pengaduan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card table-pangaduan mt-4">
+                            <div class="card-body">
+                                <h4 class="fw-bold mb-4">Pengaduan terbaru</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Foto</th>
+                                            <th>Tanggal</th>
+                                            <th>Subjek</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="images/banjir-1.jpeg" class="img-table" alt="">
+                                            </td>
+                                            <td>24 Januari 2021</td>
+                                            <td>Banjir di Perumahan Kopian</td>
+                                            <td><span class="badge rounded-pill bg-success">Selesai</span></td>
+                                            <td>
+                                                <a href="#" class="btn btn-green">Detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="images/banjir-2.jpeg" class="img-table" alt="">
+                                            </td>
+                                            <td>24 Januari 2021</td>
+                                            <td>Banjir di Perkotaan Probolinggo</td>
+                                            <td><span class="badge rounded-pill bg-success">Selesai</span></td>
+                                            <td>
+                                                <a href="#" class="btn btn-green">Detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="images/sampah-2.jpeg" class="img-table" alt="">
+                                            </td>
+                                            <td>2 Maret 2021</td>
+                                            <td>Sampah di Pesisir masih belum teratasi</td>
+                                            <td><span class="badge rounded-pill bg-danger">Belum</span></td>
+                                            <td>
+                                                <a href="#" class="btn btn-green">Detail</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script/clock.js"></script>
+    <script src="script/toggle.js"></script>
+</body>
+
+</html>

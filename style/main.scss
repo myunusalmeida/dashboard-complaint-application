@@ -1,0 +1,12 @@
+@import '../vendor/bootstrap/scss/bootstrap.scss';
+
+@import 'fonts';
+@import 'global';
+@import 'sidebar';
+@import 'navbar';
+
+@import 'components/toggle';
+@import 'components/table';
+
+@import 'pages/auth';
+@import 'pages/dashboard';

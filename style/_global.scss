@@ -1,0 +1,56 @@
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-dashboard {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 0;
+    }
+}
+
+.content {
+    background: #FFF;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 90vh;
+}
+
+.card {
+    border-radius: 14px;
+}
+
+.text-green {
+    color: #2DC48E;
+}
+
+.bg-green-alt {
+    background-color: #DEF6EE;
+}
+
+.text-red {
+    color: #FE7070;
+}
+
+.bg-red-alt {
+    background-color: #F6DEDE;
+}
+
+.btn-green {
+    border-radius: 14px;
+    @include button-variant(#C8D86A, transparent);
+}
+
+.btn {
+    border-radius: 14px !important;
+}
+
+// C8D86A
+// 2A2A2A
+// F7FAF2
