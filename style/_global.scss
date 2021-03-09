@@ -1,5 +1,6 @@
 body {
     font-family: 'Karla', sans-serif;
+    position: relative;
 }
 
 a {
@@ -44,11 +45,45 @@ a {
 
 .btn-green {
     border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include button-variant(#C8D86A, transparent);
 }
 
 .btn {
     border-radius: 14px !important;
+}
+
+.button-mobile-version {
+
+    @include media-breakpoint-down(md) {
+        position: fixed;
+        right: 20px;
+        bottom: 0%;
+        min-height: 500px;
+
+        a {
+            position: absolute;
+            right: 20px;
+
+            &:first-child {
+                bottom: 15%;
+            }
+
+            &:last-child {
+                bottom: 5%;
+            }
+
+            i {
+                font-size: 24px;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
 }
 
 // C8D86A
